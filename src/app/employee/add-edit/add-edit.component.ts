@@ -37,7 +37,6 @@ export class AddEditComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    // console.log("Swapnil",this.empEditData)
     // This will patch the value for edit when we click edit
     this.branchData();
     if (this.empEditData) {

@@ -1,0 +1,41 @@
+<div class="addButton">
+    <button type="button" class="btn btn-dark" (click)="openModel(null)">Add branch</button>
+  </div>
+  <table class="table mx-auto">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Phone</th>
+        <th>Email</th>
+        <th>BirthDate</th>
+        <th>Branch</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody *ngIf="empDetail.length > 0">
+     
+      <tr
+        *ngFor="let emp of empDetail; let i = index">
+        <td>{{i+1}}</td>
+        <td>{{emp.name}}</td>
+        <td>{{emp.phone}}</td>
+        <td>{{emp.email}}</td>
+        <td>{{emp.b_date | date:'dd-MM-yyyy'}}</td>
+        <td>{{emp.branch}}</td>
+
+       
+        <td>
+          <i class="fa fa-edit pe-3" style="font-size: 26px;color:rgb(224, 165, 3)" (click)="openModel(emp)"></i>
+          <i class="fa fa-trash ps-3" style="font-size: 26px;color:red" (click)="deleteDataFromApi(emp.empId)"></i>
+        </td>
+      </tr>
+    </tbody>
+      <!-- <tbody *ngIf="branchDetailData.length == 0"> -->
+      <tbody *ngIf="empDetail.length===0">
+     
+        <td colspan="2"></td>
+        <td colspan="2"><h3 class="mt-3 mb-3">No Records Found !</h3></td>
+   
+    </tbody>
+  </table>

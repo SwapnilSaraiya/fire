@@ -1,0 +1,9 @@
+.mainbut{
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    padding:2rem;
+}
+.mainbut button{
+    margin:2rem;
+}

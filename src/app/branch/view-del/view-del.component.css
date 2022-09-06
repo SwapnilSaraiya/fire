@@ -1,0 +1,8 @@
+.addButton{
+    display:flex;
+    justify-content: end;
+    margin:1rem;
+}
+.table{
+    width:80%;
+}
